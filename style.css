@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+header {
+  width: 100%;
+  padding: 0 14px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: #fff;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a i:hover {
+  animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translateY {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: #fff;
+  transition: 0.8s;
+}
+
+.header-button:hover {
+  background-color: #d34040;
+  border: 1px solid #d34040;
+}
+
+.header-logo {
+  width: 180px;
+  height: 160px;
+  background-image: url("assets/Logo-Renato.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+  }
+  a {
+    margin-top: 16px;
+    font-size: 19px;
+  }
+  .header-logo {
+    width: 160px;
+    margin-top: 46px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.home {
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("assets/bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.hero {
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  text-align: center;
+}
+.hero h1 {
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 38px;
+}
+.hero p {
+  margin: 14px 0;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #d94140;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+
+.button-contact:hover {
+  animation: scalebutton 0.8s alternate infinite;
+}
+
+@keyframes scalebutton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    width: 100%;
+    font-size: 34px;
+    padding: 0 14px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 34px 14px 64px 14px;
+}
+.about-content img {
+  max-width: 570px;
+}
+
+.about-content div {
+  width: 50%;
+}
+
+.about-description h2 {
+  font-size: 38px;
+}
+.about-description p {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+.services {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 54px 14px;
+}
+
+.services-content h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  max-width: 780px;
+  line-height: 150%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.haircuts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 0 44px 34px 44px;
+}
+
+.haircut {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 8px -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.haircut img {
+  width: 100%;
+  max-width: 354px;
+  transition: 0.25s;
+}
+
+.haircut img:hover {
+  transform: scale(1.21);
+  z-index: 1;
+}
+
+.haircut-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.haircut-info button {
+  color: #fff;
+  background-color: #d94140;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .haircuts {
+    flex-direction: column;
+  }
+  .haircuts img {
+    max-width: 740px;
+  }
+}
+iframe {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0;
+  gap: 25px;
+  color: #fff;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 14px;
+  color: #fff;
+}
+
+.footer-icons a i:hover {
+  animation: translateY 0.8s infinite alternate;
+  color: #d34040;
+}
+
+.footer-logo {
+  width: 130px;
+  height: 130px;
+  background-image: url("assets/Logo-Renato.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 14px 0;
+}
+
+#insta {
+  color: #d94140;
+}
+
+@media (max-width: 768px) {
+  footer a {
+    font-size: 17px;
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+}
+
+.btn-whatsapp img {
+  max-width: 74px;
+  transition: 0.4s;
+}
+
+.btn-whatsapp img:hover {
+  transform: scale(1.2);
+}
+
+.btn-whatsapp .agende-w {
+  width: 120px;
+  visibility: hidden;
+  position: absolute;
+  background-color: #232224;
+  color: #fff;
+  top: 8px;
+  left: -144px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover .agende-w {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .btn-whatsapp img {
+    max-width: 64px;
+  }
+}
+body {
+  background-color: #06121e;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: "sora", sans-serif;
+}
+
+button {
+  font-family: sora, sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
